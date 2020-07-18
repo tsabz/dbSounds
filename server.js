@@ -5,18 +5,16 @@ const path = require('path')
 // const client = require('client')
 
 //Route 
-app.get('/', (req, res) => {    
-  res.send('root route');
-})
+// app.get('/', (req, res) => {    
+//   res.send('root route');
+// })
 //Static file 
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 //productionmode 
-if(process.env.NODE_ENV === 'production'){
-  {  app.use(express.static(path.join(__clone_dbsounds, 'client/build')));  
-   app.get('*', (req, res) => {  
-       res.sendfile(path.join(__clone_dbsounds = 'client/build/index.html'));  })}
-}
+// if(process.env.NODE_ENV === 'production'){
+//   app.use(express.static(path.join(__clone_dbsounds, 'client/build')));  
+// }
 
 app.set("port", PORT);
 // const session = require('express-session');
@@ -69,8 +67,7 @@ app.use(morgan('combined')) // use 'tiny' or 'combined'
 
 // ** APP ROUTES ** // 
 // app.get('/', (req, res) => res.send('hello world'))
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__clone_dbsounds, 'build', 'index.html'))
+app.get('/', (req, res) => {res.send("hello world")
 })
 app.get('/dbsounds', (req, res) => producers.getdbSoundsData(req, res, db))
 app.post('/dbsounds', (req, res) => producers.postdbSoundsData(req, res, db))
