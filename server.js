@@ -16,6 +16,7 @@ const path = require('path')
 //   app.use(express.static(path.join(__clone_dbsounds, 'client/build')));  
 // }
 
+
 app.set("port", PORT);
 // const session = require('express-session');
 
@@ -65,14 +66,27 @@ app.use(morgan('combined')) // use 'tiny' or 'combined'
 //   next();
 // });
 
+
+
 // ** APP ROUTES ** // 
 // app.get('/', (req, res) => res.send('hello world'))
-app.get('/', (req, res) => {res.send("hello world")
-})
+// app.get('/', (req, res) => {res.send("hello world")
+// })
 app.get('/dbsounds', (req, res) => producers.getdbSoundsData(req, res, db))
 app.post('/dbsounds', (req, res) => producers.postdbSoundsData(req, res, db))
 app.put('/dbsounds', (req, res) => producers.putdbSoundsData(req, res, db))
 app.delete('/dbsounds/:id', (req, res) => producers.deletedbSoundsData(req, res, db))
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
 app.listen(PORT, (req, res) => {
   console.log(`server listening on port: ${PORT}`)
   });
+
