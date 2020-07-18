@@ -4,9 +4,9 @@
   "description": "##  A virtual midi board where producers can come check out some sounds to play with and upload their own as well",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix client", 
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd client && npm start && node server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
