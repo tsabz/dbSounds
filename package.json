@@ -4,13 +4,24 @@
   "description": "##  A virtual midi board where producers can come check out some sounds to play with and upload their own as well",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client", 
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "cd client && npmstart && node server.js"
   },
+=======
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client", 
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+},
+  "proxy": "http://localhost:5000",
+>>>>>>> 56a6ffc1f71e615f4f8ed24f1892e8e7820f2823
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
