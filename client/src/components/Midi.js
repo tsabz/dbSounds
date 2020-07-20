@@ -21,21 +21,23 @@ const useKeyboardBindings = map => {
     }, [map]);
   };
 
+
+
 const Midi = () => { 
     const [play] = useSound(baseloop, {
         sprite: {
             kick: [0, 1800],
-            hihat: [1800, 2100],
-            snare: [1200, 1800],
-            cowbell: [968, 200],
+            hihat: [1800, 2100]
           },
     });
+
+
 
     useKeyboardBindings({
         1: () => play({ id: 'kick' }),
         2: () => play({ id: 'hihat' }),
-        3: () => play({ id: 'snare' }),
-        4: () => play({ id: 'cowbell' }),
+        3: () => play({ id: 'drum1' }),
+        4: () => play({ id: 'drum2' }),
       });
 
     // useKeyboardBindings({
@@ -52,8 +54,8 @@ const Midi = () => {
                     <button arian-label="hihat" onMouseDown={() => play({id: 'hihat'})} className="square">2</button>
                     <button className="square">3</button>
                     
-                    <button arian-label="snare" onMouseDown={() => play({id: 'snare'})} className="square">4</button>
-                    <button arian-label="cowbell" onMouseDown={() => play({id: 'cowbell'})} className="square">5</button>
+                    <button arian-label="snare" onMouseDown={() => play({id: 'drum1'})} className="square">4</button>
+                    <button arian-label="cowbell" onMouseDown={() => play({id: 'drum2'})} className="square">5</button>
                     </>
                     <button className="square">6</button>
                     <button className="square">7</button>

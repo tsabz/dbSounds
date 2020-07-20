@@ -49,9 +49,18 @@ class App extends Component {
   constructor(){ 
     super()
     this.state = {
-      producers: []
+      producers: [],
+      show: false
    }
   }
+
+  toggleShow = () => {
+    this.setState({
+        show: !this.state.show
+    })
+  }
+
+
   newProducerName = (event) => {
     this.setState({
       newName: event.target.value,
@@ -174,7 +183,8 @@ axios.get('http://localhost:3000/dbsounds').then(
       <Midi />
       <div>
       </div>
-      <h2>INSERT INFO HERE</h2>
+      <button onClick={this.toggleShow}>Insert Info Here</button>
+      {this.state.show ? (
       <form onSubmit={this.createProducers}>
         <input onChange={this.newProducerName} type="text" placeholder="Name"/>
         <input onChange={this.newProducerGenre} type="text" placeholder="Genre"/>          
@@ -182,6 +192,9 @@ axios.get('http://localhost:3000/dbsounds').then(
         <input onChange={this.newProducerLocation} type="text" placeholder="Location"/>
           <input type="submit" value="Submit"/>
       </form>
+                    ) : (
+                      ''
+                    )}
         <div className="main">
           <ul>
             {
