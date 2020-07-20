@@ -183,14 +183,14 @@ axios.get('http://localhost:3000/dbsounds').then(
       <Midi />
       <div>
       </div>
-      <button onClick={this.toggleShow}>Insert Info Here</button>
+      <button className="infobutton" onClick={this.toggleShow}>Insert Info Here</button>
       {this.state.show ? (
       <form onSubmit={this.createProducers}>
         <input onChange={this.newProducerName} type="text" placeholder="Name"/>
         <input onChange={this.newProducerGenre} type="text" placeholder="Genre"/>          
         <input onChange={this.newProducerNotes} type="text" placeholder="Notes"/>
         <input onChange={this.newProducerLocation} type="text" placeholder="Location"/>
-          <input type="submit" value="Submit"/>
+          <input className="submit" type="submit" value="Submit"/>
       </form>
                     ) : (
                       ''
