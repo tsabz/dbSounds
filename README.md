@@ -12,7 +12,7 @@
 
 
 ## Technology Used
-Node.js, Express.js, PostgresSQL, Express-Session, Reactjs
+>Node.js, Express.js, PostgresSQL, Express-Session, Reactjs
 ---
 
 ## Features 
