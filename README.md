@@ -1,11 +1,15 @@
 # dbSounds
-> Virtual Midi Board
+### Virtual Midi Board
 > An app where producers can upload sounds, test, and record them online and share with other producers in the database.
 
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
-### Features and Technology Used
 
+- [Technology Used](#TechnologyUsed)
+- [Example](#example)
+
+
+## Technology Used
 Node.js, Express.js, PostgresSQL, express-session, Reactjs
 
 
@@ -14,7 +18,6 @@ Node.js, Express.js, PostgresSQL, express-session, Reactjs
 ## Example 
 
 ```javascript
-// code away!
 
 const Midi = () => { 
     let [play] = useSound(baseloop, {
@@ -30,7 +33,7 @@ const Midi = () => {
 
 
 ### View Live App 
-
+https://dbsounds.herokuapp.com/
 
 ## Strech Goals
 
