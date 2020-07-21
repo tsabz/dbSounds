@@ -1,10 +1,33 @@
 # dbSounds
+> Virtual Midi Board
+> An app where producers can upload sounds, test, and record them online and share with other producers in the database.
 
-##  A virtual midi board where producers can come check out some sounds to play with and upload their own as well
 
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
 ### Features and Technology Used
 
 Node.js, Express.js, PostgresSQL, express-session, Reactjs
+
+
+---
+
+## Example 
+
+```javascript
+// code away!
+
+const Midi = () => { 
+    let [play] = useSound(baseloop, {
+        sprite: {
+            kick: [0, 1800],
+            hihat: [1800, 2100]
+          },
+    });
+}
+```
+
+---
+
 
 ### View Live App 
 
@@ -18,3 +41,4 @@ https://medium.com/@olinations/build-a-crud-template-using-react-bootstrap-expre
 https://joshwcomeau.com/react/announcing-use-sound-react-hook/#installation
 https://github.com/joshwcomeau/use-sound/blob/master/stories/demos/DrumMachine.js#L5
 https://neumorphism.io/#383838
+https://codepen.io/beben-koben/pen/gfuvc?editors=1100
