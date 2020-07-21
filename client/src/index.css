@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: black;
+  background-color:#1d1b1b;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -21,20 +21,27 @@ code {
 }
 .midicontainer {
   display: grid;
-  grid: repeat(3, 12vw) / auto-flow;
+  grid: repeat(3, 14vw) / auto-flow;
   margin: 20px;
 }
 
 .buttonrow {
   display: grid;
-  grid: repeat(1, 12vw) / auto-flow;
+  grid: repeat(3, 13vw) / auto-flow;
 }
 
 .buttonrow > .square {
   margin: 10px;
-  background-color: white;
+  background-color: #d5c8c8;
   border: 1px #383838 solid;
-  color: limegreen;
+  color: white;
+}
+
+.square {
+  border-radius: 30px;
+  background: linear-gradient(225deg, #ffffff, #ffffff);
+/* box-shadow:  35px 35px 71px #fffdfd, 
+             -35px -35px 71px #2a2828; */
 }
 
 .square:hover {
