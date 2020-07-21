@@ -39,10 +39,10 @@ code {
 
 .square {
   border-radius: 50px;
-background: linear-gradient(315deg, #323232, #3c3c3c);
-box-shadow:  -14px -14px 28px #1d1d1d, 
+  background: linear-gradient(315deg, #323232, #3c3c3c);
+  box-shadow:  -14px -14px 28px #1d1d1d, 
              14px 14px 28px #535353;
-}
+} 
 
 .infobutton, .submit{
   background-color: #383838;
