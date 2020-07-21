@@ -6,13 +6,17 @@
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
 
 - [Technology Used](#TechnologyUsed)
-- [Example](#example)
+- [Features](#Features)
+- [Example](#Example)
+- [Resources](#Resources)
 
 
 ## Technology Used
-Node.js, Express.js, PostgresSQL, express-session, Reactjs
+Node.js, Express.js, PostgresSQL, Express-Session, Reactjs
+---
 
-
+## Features 
+>User can add their info to the database, use keyboard and touch screen to interact with the midi
 ---
 
 ## Example 
