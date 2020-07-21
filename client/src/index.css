@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #383838;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -32,17 +32,18 @@ code {
 
 .buttonrow > .square {
   margin: 10px;
-  background-color: blue;
+  background-color: white;
   border: 1px #383838 solid;
-  color: #383838;
+  color: limegreen;
 }
 
-.square {
-  border-radius: 50px;
-  background: linear-gradient(315deg, #323232, #3c3c3c);
-  box-shadow:  -14px -14px 28px #1d1d1d, 
-             14px 14px 28px #535353;
+.square:hover {
+  -webkit-animation:rainbow 1s infinite;
+  -ms-animation:rainbow 1s infinite;
+  -o-animation:rainbow 1s infinite;
+  animation:rainbow 1s infinite;
 } 
+
 
 .infobutton, .submit{
   background-color: #383838;
@@ -55,4 +56,148 @@ form > input{
   margin: 10px;
   background-color: #383838;
   color: blanchedalmond;
+}
+
+
+/*simple start*/
+@keyframes black-to-white {
+  0% {
+    background: black;
+  }
+  100% {
+    background: ghostwhite;
+  }
+}
+
+/*just colors*/
+@keyframes rainbow {
+  0% {
+    background: black;
+  }
+  10% {
+    background: crimson;
+  }
+  25% {
+    background: hotpink;
+  }
+  30% {
+    background: coral;
+  }
+  40% {
+    background: lightyellow;
+  }
+  50% {
+    background: palegreen;
+  }
+  60% {
+    background: mediumaquamarine;
+  }
+  75% {
+    background: steelblue;
+  }
+  80% {
+    background: darkviolet;
+  }
+  90% {
+    background: black;
+  }
+  100% {
+    background: ghostwhite;
+  }
+}
+
+/*colors and movement*/
+@keyframes rainbow-move {
+  0% {
+    background: black;
+    left: 0%;
+    top: 0%;
+  }
+  10% {
+    background: crimson;
+  }
+  25% {
+    background: hotpink;
+    left: 75%;
+    top: 0px;
+  }
+  30% {
+    background: coral;
+  }
+  40% {
+    background: lightyellow;
+  }
+  50% {
+    background: palegreen;
+    left: 75%;
+    top: 10em;
+  }
+  60% {
+    background: mediumaquamarine;
+  }
+  75% {
+    background: steelblue;
+    left: 0%;
+    top: 10em;
+  }
+  80% {
+    background: darkviolet;
+  }
+  90% {
+    background: black;
+  }
+  100% {
+    background: ghostwhite;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/*colors, movement and rotation*/
+@keyframes rainbow-move-change {
+  0% {
+    background: black;
+    left: 0%;
+    top: 0%;
+  }
+  10% {
+    background: crimson;
+  }
+  25% {
+    background: hotpink;
+    left: 75%;
+    top: 0px;
+  }
+  30% {
+    background: coral;
+  }
+  40% {
+    background: lightyellow;
+  }
+  50% {
+    background: palegreen;
+    left: 75%;
+    top: 10em;
+    transform: rotate(600deg);
+  }
+  60% {
+    background: mediumaquamarine;
+  }
+  75% {
+    background: steelblue;
+    left: 0%;
+    top: 10em;
+    border-radius: 100%;
+  }
+  80% {
+    background: darkviolet;
+  }
+  90% {
+    background: black;
+  }
+  100% {
+    background: ghostwhite;
+    left: 0px;
+    top: 0px;
+  }
 }
