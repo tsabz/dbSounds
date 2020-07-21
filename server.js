@@ -47,7 +47,7 @@ var db = require('knex')({
 const producers = require('./controllers/producers.js')
 
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3001']
+const whitelist = ['http://localhost:3001', 'https://dbsounds.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
