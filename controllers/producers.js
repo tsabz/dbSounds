@@ -8,7 +8,7 @@ const getdbSoundsData = (req, res, db) => {
           res.json({dataExists: 'false'})
         }
       })
-      .catch(err => res.status(400).json({dbError: 'db error'}))
+      .catch(err => res.status(400).json({dbError: err}))
   }
   
 
@@ -21,7 +21,7 @@ const getdbSoundsData = (req, res, db) => {
       .then(item => {
         res.json(item)
       })
-      .catch(err => res.status(400).json({dbError: 'db error'}))
+      .catch(err => res.status(400).json({dbError: err}))
   }
   
   const putdbSoundsData = (req, res, db) => {
@@ -35,7 +35,7 @@ const getdbSoundsData = (req, res, db) => {
       .then(item => {
         res.json(item)
       })
-      .catch(err => res.status(400).json({dbError: 'db error'}))
+      .catch(err => res.status(400).json({dbError: err}))
   }
   
   const deletedbSoundsData = (req, res, db) => {
@@ -45,7 +45,7 @@ const getdbSoundsData = (req, res, db) => {
       .then(() => {
         res.json({delete: 'true'})
       })
-      .catch(err => res.status(400).json({dbError: 'db error'}))
+      .catch(err => res.status(400).json({dbError: err}))
   }
   
   module.exports = {

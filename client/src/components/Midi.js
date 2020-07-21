@@ -6,6 +6,7 @@ import virgo from './sounds/virgo.wav';
 import wave from './sounds/wave.mp3';
 
 
+
 const useKeyboardBindings = map => {
     React.useEffect(() => {
       const handlePress = ev => {
@@ -57,6 +58,7 @@ const Midi = () => {
     });
 
     
+    
 
 
     useKeyboardBindings({
@@ -70,11 +72,6 @@ const Midi = () => {
         8: () => w({ id: 'wave1' }),
         9: () => w({ id: 'wave2' })
       });
-
-    // useKeyboardBindings({
-    //     1: () => play({})
-    // })
-
         
         return (
             <div className="midicontainer">
