@@ -27,15 +27,21 @@ const cors = require('cors')  // allows/disallows cross-site communication
 const morgan = require('morgan') // logs requests
 
 // ** DB LOCAL HOST ** //
+// var db = require('knex')({
+//     client: 'pg',
+//     connection: {
+//       host : '127.0.0.1',
+//       user : '',
+//       password : '',
+//       database : 'dbsounds'
+//     }
+//   });
+
+
 var db = require('knex')({
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      user : '',
-      password : '',
-      database : 'dbsounds'
-    }
-  });
+      client: 'pg',
+      connection: 'postgres://cnrptrwyvelwvt:379e794b45f9466c37418c53955d5998aae9718815478f13fb43127909d37114@ec2-54-236-169-55.compute-1.amazonaws.com:5432/d5a134cali4vea'
+    });
 
 // ** CONTROLLERS ** //
 const producers = require('./controllers/producers.js')
