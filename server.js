@@ -70,19 +70,7 @@ app.use(cors(corsOptions))
 app.use(bodyParser.json())
 app.use(morgan('combined')) // use 'tiny' or 'combined'
 
-// app.use(express.static(path.join(__client, 'build')))
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
 
-
-
-// ** APP ROUTES ** // 
-// app.get('/', (req, res) => res.send('hello world'))
-// app.get('/', (req, res) => {res.send("hello world")
-// })
 app.get('/dbsounds', (req, res) => producers.getdbSoundsData(req, res, db))
 app.post('/dbsounds', (req, res) => producers.postdbSoundsData(req, res, db))
 app.put('/dbsounds', (req, res) => producers.putdbSoundsData(req, res, db))
