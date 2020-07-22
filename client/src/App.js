@@ -90,7 +90,8 @@ class App extends Component {
   createProducers = () => { 
     // event.preventDefault();
     axios.post(
-      'http://localhost:3000/dbsounds',
+      // 'http://localhost:3000/dbsounds',
+      '/dbsounds',
       {
         producer_name: this.state.newName,
         producer_genre: this.state.newGenre,
@@ -148,7 +149,7 @@ axios.get('http://localhost:3000/dbsounds').then(
     event.preventDefault();
     const id = event.target.getAttribute('id');
     axios.put(
-      'http://localhost:3000/dbsounds',
+      '/dbsounds',
       {
         id: id,
         producer_name: this.state.changeName,
@@ -168,7 +169,7 @@ axios.get('http://localhost:3000/dbsounds').then(
 
   deleteProducer = (event) => {
     event.preventDefault();
-    axios.delete('http://localhost:3000/dbsounds/' + event.target.value).then(
+    axios.delete('/dbsounds' + event.target.value).then(
         (response) => {
           this.loadProducers()
         }
