@@ -108,7 +108,7 @@ class App extends Component {
 }
 
 loadProducers = () => { 
-axios.get('/dbsounds').then(
+axios.get('http://localhost:3000/dbsounds').then(
   (response) => {
     this.setState({
       producers: response.data
