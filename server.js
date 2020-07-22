@@ -37,6 +37,10 @@ const morgan = require('morgan') // logs requests
 //     }
 //   });
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 var db = require('knex')({
       client: 'pg',
@@ -47,7 +51,7 @@ var db = require('knex')({
 const producers = require('./controllers/producers.js')
 
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3001', 'https://dbsounds.herokuapp.com']
+const whitelist = config.corsWhitelist;
 const corsOptions = {
   origin: function (origin, callback) {
     console.log(`Origin ${origin}`)
