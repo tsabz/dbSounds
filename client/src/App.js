@@ -6,6 +6,7 @@ import { EventEmitter } from 'events';
 
 
 
+
 class Edit extends React.Component {
   state = {
     show: false
@@ -111,7 +112,7 @@ loadProducers = () => {
 axios.get('/dbsounds').then(
   (response) => {
     this.setState({
-      producers: response.data
+      producers: response.data,
     })
   }
 )
