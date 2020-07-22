@@ -2,7 +2,7 @@
 ### Virtual Midi Board
 > An app where producers can upload sounds, test, and record them online and share with other producers in the database.
 
-https://github.com/tsabz/dbsounds/issues/1#issue-663451680
+![alt text](https://github.com/tsabz/dbsounds/issues/1#issue-663451680)
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
 
