@@ -50,6 +50,7 @@ const producers = require('./controllers/producers.js')
 const whitelist = ['http://localhost:3001', 'https://dbsounds.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
+    console.log(`Origin ${origin}`)
     if (whitelist.indexOf(origin) !== -1 || !origin) {
       console.log("Origin acceptable")
       callback(null, true)
