@@ -149,7 +149,7 @@ axios.get('/dbsounds').then(
     event.preventDefault();
     const id = event.target.getAttribute('id');
     axios.put(
-      '/dbsounds',
+      '/dbsounds/',
       {
         id: id,
         producer_name: this.state.changeName,
@@ -169,7 +169,7 @@ axios.get('/dbsounds').then(
 
   deleteProducer = (event) => {
     event.preventDefault();
-    axios.delete('/dbsounds' + event.target.value).then(
+    axios.delete('/dbsounds/' + event.target.value).then(
         (response) => {
           this.loadProducers()
         }
